@@ -67,6 +67,7 @@ main{
 .list ol li{
   font-size: 17px;
   font-family: sans-serif;
+  cursor: pointer;
 }
 
 .valueItem{
@@ -78,4 +79,15 @@ main{
 
 .valueItem:focus{
   box-shadow: 0 0 5px #7CA7DA inset;
+}
+
+@media screen and (max-width: 480px){
+  main{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .prosPart,.consPart{
+    width: 100%;
+  }
 }
