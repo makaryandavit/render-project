@@ -26,16 +26,13 @@ main{
   display: flex;
 }
 
-.prosPart{
+.part{
   width: 50%;
-  height: 100%;
+  height: inherit;
   border-right: 1px solid black;
 }
 
-.consPart{
-  width: 50%;
-  height: 100%;
-}
+
 
 .title{
   width: 100%;
@@ -51,9 +48,8 @@ main{
 
 .list{
   width: 100%;
-  min-height: 34vh;
+  min-height: 40vh;
   height: auto;
-  padding: 10px 30px; 
 }
 
 .list ol{
@@ -62,6 +58,8 @@ main{
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 10px 30px; 
+
 }
 
 .list ol li{
