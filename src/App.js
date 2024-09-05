@@ -1,14 +1,13 @@
-import React from "react";
-import "./App.css";
-import { PopUp, ProsAndCons } from "./components";
+import React from 'react';
+import { PopUp, ProsAndCons } from './components';
 
 function App() {
-  return (
-    <div className="App">
-      <ProsAndCons />
-      <PopUp />
-    </div>
-  );
+	return (
+		<>
+			<ProsAndCons />
+			<PopUp />
+		</>
+	);
 }
 
 export default App;

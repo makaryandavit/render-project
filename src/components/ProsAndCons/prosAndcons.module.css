@@ -1,91 +1,99 @@
-.container{
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-  border: 1px solid black;
-  margin: 50px auto;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
 }
 
-header{
-  width: 100%;
-  height: 8vh;
-  background-color: #808080;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  color: white;
-  font-family: sans-serif;
-  font-weight: bold;
+.container {
+	max-width: 600px;
+	width: 100%;
+	height: auto;
+	border: 1px solid black;
+	margin: 50px auto;
 }
 
-main{
-  width: 100%;
-  height: auto;
-  min-height: 40vh;
-  display: flex;
+header {
+	width: 100%;
+	height: 8vh;
+	background-color: #808080;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	color: white;
+	font-family: sans-serif;
+	font-weight: bold;
 }
 
-.part{
-  width: 50%;
-  height: inherit;
-  border-right: 1px solid black;
+main {
+	width: 100%;
+	height: auto;
+	min-height: 40vh;
+	display: flex;
 }
 
-
-
-.title{
-  width: 100%;
-  height: 6vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid;
-  font-family: sans-serif;
-  font-size: 22px;
-  font-weight: lighter;
+.part {
+	width: 50%;
+	height: inherit;
 }
 
-.list{
-  width: 100%;
-  min-height: 40vh;
-  height: auto;
+.part:nth-child(1) {
+	border-right: 1px solid black;
+}
+.title {
+	width: 100%;
+	height: 6vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid;
+	font-family: sans-serif;
+	font-size: 22px;
+	font-weight: lighter;
 }
 
-.list ol{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 10px 30px; 
-
+.list {
+	width: 100%;
+	min-height: 40vh;
+	height: auto;
 }
 
-.list ol li{
-  font-size: 17px;
-  font-family: sans-serif;
-  cursor: pointer;
+.list ol {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 10px 30px;
 }
 
-.valueItem{
-  background: none;
-  font-size: 17px;
-  font-family: sans-serif;
-  padding: 3px;
+.list ol li {
+	font-size: 17px;
+	font-family: sans-serif;
+	cursor: pointer;
 }
 
-.valueItem:focus{
-  box-shadow: 0 0 5px #7CA7DA inset;
+.valueItem {
+	background: none;
+	font-size: 17px;
+	font-family: sans-serif;
+	padding: 3px;
 }
 
-@media screen and (max-width: 480px){
-  main{
-    width: 100%;
-    flex-direction: column;
-  }
+.valueItem:focus {
+	box-shadow: 0 0 5px #7ca7da inset;
+}
 
-  .prosPart,.consPart{
-    width: 100%;
-  }
+@media screen and (max-width: 480px) {
+	main {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.prosPart,
+	.consPart {
+		width: 100%;
+	}
 }

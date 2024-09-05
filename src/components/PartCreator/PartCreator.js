@@ -1,18 +1,24 @@
 import React from 'react';
 import styles from '../ProsAndCons/prosAndcons.module.css';
 import { clickOnItem, logic } from '../../logic';
-import Item from '../Ui/Item';
+import {Item} from '../Item';
 
-const PartCreator = ({
-	title,
-	arrayOfItems,
-	editingIndex,
-	placeholderValue,
-	setEditText,
-	editText,
-	setEditingIndex,
-	setLists,
-}) => {
+const PartCreator = (props) => {
+	const { title, arrayOfItems, editingIndex, placeholderValue, setEditText, editText, setEditingIndex, setLists } =
+		props;
+
+	const onItemClick = (index) => {
+		clickOnItem(index, arrayOfItems, setEditingIndex, setEditText, setLists);
+	};
+
+	const onItemChange = (value) => {
+		setEditText(value);
+	};
+
+	const onItemBlur = () => {
+		logic(editText, editingIndex, arrayOfItems, setLists, setEditingIndex, setEditText);
+	};
+
 	return (
 		<div className={styles.part}>
 			<div className={styles.list}>
@@ -22,14 +28,13 @@ const PartCreator = ({
 						<Item
 							key={index}
 							item={item}
-							index={index}
-							arrayOfItems={arrayOfItems}
-							setEditingIndex={setEditingIndex}
-							setEditText={setEditText}
-							setLists={setLists}
-							editingIndex={editingIndex}
 							placeholderValue={placeholderValue}
 							editText={editText}
+							isEditing={editingIndex === index}
+							isEditingNull={editingIndex !== null}
+							onClick={() => onItemClick(index)}
+							onChange={(value) => onItemChange(value)}
+							onBlur={() => onItemBlur()}
 						/>
 					))}
 				</ol>
